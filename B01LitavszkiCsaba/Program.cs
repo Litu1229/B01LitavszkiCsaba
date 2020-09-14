@@ -24,13 +24,25 @@ namespace B01LitavszkiCsaba
             
             sr.Close();
         }
-       
-        
+        static void Minimumertek()
+        {
+            int min = adatok[0];
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                if (adatok[i] < min)
+                {
+                    min = adatok[i];
+                }
+            }
+            Console.WriteLine("A minimum: {0}", Minimumertek());
+
+        }
+
 
         static void Main(string[] args)
         {
             Beolvasas();
-           
+            Minimumertek();
           
             Console.ReadKey();
         }
