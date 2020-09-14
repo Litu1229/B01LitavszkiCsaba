@@ -19,7 +19,9 @@ namespace B01LitavszkiCsaba
                 {
                 adatok[i] = 3 * int.Parse(atmeneti[i]);
                 Console.WriteLine(adatok[i]);
+                i++;
                 }
+            
             
             
             sr.Close();
@@ -32,6 +34,7 @@ namespace B01LitavszkiCsaba
                 if (adatok[i] < min)
                 {
                     min = adatok[i];
+                    i++;
                 }
             }
             Console.WriteLine("A minimum: {0}", Minimumertek());
