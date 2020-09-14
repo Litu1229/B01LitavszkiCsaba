@@ -9,13 +9,32 @@ namespace B01LitavszkiCsaba
 {
     class Program
     {
-        static void beolvasas()
+        static int[] adatok = new int[1000];
+        static void Beolvasas()
         {
             StreamReader sr = new StreamReader("adatok.dat");
+            string[] atmeneti = sr.ReadLine().Split();
+            
+                for (int i = 0; i < adatok.Length; i++)
+                {
+                adatok[i] = int.Parse(atmeneti[i]);
+                Console.WriteLine(adatok[i]);
+                }
+            
+            
+            sr.Close();
         }
+       
+        
+
         static void Main(string[] args)
         {
-            beolvasas();
+            Beolvasas();
+           
+          
+            Console.ReadKey();
         }
+
+        
     }
 }
